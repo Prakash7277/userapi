@@ -41,4 +41,15 @@ public class UserServices {
 		return "user deleted successfully";
 	}
 	
+	public User updateUser(int id, User user)
+	{
+		User founded_user=userRepository.findById(id).orElseThrow(
+			()->{
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+		});
+	
+		user.setId(id);
+		return userRepository.save(user);
+	}
+	
 }
