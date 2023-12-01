@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.models.User;
 import com.example.services.UserServices;
 
-@CrossOrigin(origins ="https://prakash7277.github.io/user-register/showuser")
+@CrossOrigin(origins ="http://localhost:4200/")
 @RestController
 @RequestMapping("v1/api/users")
 public class UserController {
